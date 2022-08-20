@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/hy-styles.css">
+        <link rel="icon" href="/img/up.ico">
+        <title>Weather</title>
+    </head>
+    
+    <body>
+    
+    <div class="main-content">
+        {{>header}}
+        <h2>Use this site to get your weather!</h2>
+
+        <form id="formFetch">
+
+            <label for="temperatureUnits">Choose temperature unit:</label>
+
+            <select name="selectName" id="selectID" form="formFetch">
+                <option value="f">Fahrenheit</option>
+                <option value="m">Celsius</option>
+                <option value="s">Kevin (scientific)</option>
+            </select><br><br>
+            <input placeholder="Location" name="inputName" id="inputID" form="formFetch">
+            <button name="buttonName" id="buttonID" form="formFetch">Submit</button>
+        </form>
+
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+    </div>
+
+    {{>footer}}
+        
+    <script src='/js/hy-app.js'></script>
+    </body>
+</html>
+
