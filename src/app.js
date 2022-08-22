@@ -82,9 +82,9 @@ app.get( '/weather', ( req, res ) => {
                 return res.send( { error: error })
             } else {
                 // console.log( ++seqNo )
-                let respInfo={ location: place_name, temperature: temperature, feelslike_temperature: feelslike_temperature
-                    , weather_descriptions: weather_descriptions
-                    , observation_time: observation_time, weather_code: weather_code, humidity: humidity }
+                let respInfo={ location: place_name, temperature, feelslike_temperature
+                    , weather_descriptions
+                    , observation_time, weather_code, humidity }
                 console.log( respInfo )
                 console.log( "temperature: %i, feelslike: %i, descriptions: %O", temperature
                 , feelslike_temperature, weather_descriptions )
