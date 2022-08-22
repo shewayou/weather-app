@@ -5,7 +5,7 @@ console.log( 'client side javascript file is loaded!')
 /* ***
 let units= 'f'
 let address= 'leesburg va'
-let weatherUrl= 'http://localhost:3000/weather?address=' + encodeURIComponent( address ) + '&units=' + units
+let weatherUrl= '/weather?address=' + encodeURIComponent( address ) + '&units=' + units
 fetch( weatherUrl ).then(( response ) => {
     response.json().then((data ) => {
         console.log( data )

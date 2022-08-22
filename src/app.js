@@ -8,6 +8,8 @@ const hbs= require( 'hbs' )
 const geocode= require( './utils/geocode.js' )
 const forecast= require( './utils/forecast.js' )
 
+const port= process.env.PORT || 3000
+
 
 // Setup location for static contents
 const publicDirectory= path.join( __dirname, '../public')
@@ -26,8 +28,8 @@ hbs.registerPartials( partialsPath )
 console.log( 'partialsPath %s', partialsPath )
 
 
-app.listen( 3000, () => {
-    console.log( 'server starting on port 3000')
+app.listen( port, () => {
+    console.log( `server starting on port ${port}` )
 })
 
 
