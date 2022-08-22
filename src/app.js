@@ -88,7 +88,7 @@ app.get( '/weather', ( req, res ) => {
                 console.log( respInfo )
                 console.log( "temperature: %i, feelslike: %i, descriptions: %O", temperature
                 , feelslike_temperature, weather_descriptions )
-                console.log( "observation_time: %s, weather_code: %i, humidity: %i", observation_time
+                console.log( "observation_time: %s, weather_code: %i, humidity: %i\%", observation_time
                 , weather_code, humidity )
                 res.send( respInfo )
                 // console.log( ++seqNo )
