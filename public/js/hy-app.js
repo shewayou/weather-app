@@ -65,6 +65,9 @@ weatherForm.addEventListener( 'submit', ( event ) => {
                 message2.textContent= "temperature: " + data.temperature
                  + ", feelslike: " + data.feelslike_temperature 
                  + ", description: " + data.weather_descriptions[0]
+                 + ", observation_time: " + data.observation_time
+                 + ", weather_code: " + data.weather_code
+                 + ", humidity: " + data.humidity
                 // message2.textContent= data  // Failed shows only [object Object]
             }
             

@@ -75,17 +75,21 @@ app.get( '/weather', ( req, res ) => {
         } else {
         // note center is array [ long, lat ]
         console.log( "Info: place_name=%s long=%d lat=%d", place_name, center[0], center[1] )
-        forecast( center[0], center[1], units, ( error, { temperature, feelslike: feelslike_temperature, weather_descriptions }= {} ) => {
+        forecast( center[0], center[1], units, ( error, { temperature, feelslike: feelslike_temperature, weather_descriptions
+                                                        , observation_time, weather_code, humidity }= {} ) => {
             if ( error ) {
                 // console.error( 'ERROR: forecast: %o', error )
                 return res.send( { error: error })
             } else {
                 // console.log( ++seqNo )
                 let respInfo={ location: place_name, temperature: temperature, feelslike_temperature: feelslike_temperature
-                    , weather_descriptions: weather_descriptions }
+                    , weather_descriptions: weather_descriptions
+                    , observation_time: observation_time, weather_code: weather_code, humidity: humidity }
                 console.log( respInfo )
                 console.log( "temperature: %i, feelslike: %i, descriptions: %O", temperature
                 , feelslike_temperature, weather_descriptions )
+                console.log( "observation_time: %s, weather_code: %i, humidity: %i", observation_time
+                , weather_code, humidity )
                 res.send( respInfo )
                 // console.log( ++seqNo )
             }

@@ -31,6 +31,7 @@ request({url: url, json: true }, (error, response) => {
                 // for ( var i= 0; i < response.body.current.weather_descriptions.length; i++ ) {
                 //     console.log( "Info: description %s", response.body.current.weather_descriptions[i])
                 // }
+                // console.log( response.body.current )
                 callback( undefined, response.body.current )
             } else {
                 // response.body.success is present then something went wrong!
